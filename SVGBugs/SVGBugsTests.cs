@@ -198,7 +198,7 @@ namespace SVGBugs
         }
 
         /// <summary>
-        /// Output svg color are converted to knowncolors e.g. lime, or gets shorteden e.g. #CC00FF => #C0F
+        /// Output svg color are converted to knowncolors e.g. lime, or gets shortened e.g. #CC00FF => #C0F
         /// This does not render well in Xamarin forms SkiaSharp.
         /// Colors should stay hexadecimal all the times,
         /// </summary>

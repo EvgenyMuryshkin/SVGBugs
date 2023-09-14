@@ -1,6 +1,7 @@
 using SkiaSharp;
 using System.Drawing;
 using System.Text;
+using System.Xml.Linq;
 
 namespace SVGBugs
 {
@@ -220,6 +221,26 @@ namespace SVGBugs
                 var svgContent = Encoding.UTF8.GetString(svgBytes);
                 Assert.IsTrue(svgContent.Contains("#00ff00"));
             }
+        }
+
+        /// <summary>
+        /// Inconsistent font size/weight in PNG render and xamarin
+        /// see xamarin/Xamaring Font Weight.png for comparison
+        /// </summary>
+        [TestMethod]
+        public void FontWeightIgnored()
+        {
+            SavePNGFromSVGFile($"font-weight-ignored.png", $"font-weight-ignored.svg");
+        }
+
+        /// <summary>
+        /// Inconsistent PNG render and xamarin and browser
+        /// see xamarin/Xamaring Text With Outline.png for comparison
+        /// </summary>
+        [TestMethod]
+        public void TextWithOutline()
+        {
+            SavePNGFromSVGFile($"text-with-outline.png", $"text-with-outline.svg");
         }
     }
 }

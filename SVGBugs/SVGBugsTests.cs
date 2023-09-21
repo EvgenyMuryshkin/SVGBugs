@@ -6,7 +6,7 @@ using System.Xml.Linq;
 namespace SVGBugs
 {
     [TestClass]
-    public class SVGBugsTests : SVGBaseTest
+    public partial class SVGBugsTests : SVGBaseTest
     {
         /// <summary>
         /// These PNG do not redner, or rendered weirdly
